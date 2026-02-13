@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>For You, Love</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="Photo/photo.jpg">
+</head>
+<body>
+  <div class="bg"></div>
+
+  <main class="wrap">
+    <header class="top">
+      <div class="brand">
+        <div class="dot"></div>
+        <div class="brandText">
+          <div class="brandTitle" id="brandTitle">For Krizzia</div>
+          <div class="brandSub" id="brandSub">February 14, 2026</div>
+        </div>
+      </div>
+      <div class="sealIcon">❤️</div>
+      <button class="ghost" id="openSettings" type="button">BABI</button>
+    </header>
+
+    <section class="card hero">
+      <div class="heroLeft">        <h1 id="headline">Happy Valentine's Day.</h1>
+        <p class="muted" id="subline">
+          A gift made with genuine care and thoughtfulness, just for you.
+        </p>
+
+        <div class="row">
+          <div class="pill">
+            <div class="pillLabel">Countdown</div>
+            <div class="pillValue" id="countdown">Loading…</div>
+          </div>
+          <div class="pill">
+            <div class="pillLabel">Your name</div>
+            <div class="pillValue" id="nickname">Love</div>
+          </div>
+        </div>
+
+        <div class="btnRow">
+          <button class="btn" id="surpriseBtn" type="button">Discover surprises</button>
+          <button class="btn2" id="confettiBtn" type="button">Celebrate moment</button>
+        </div>
+
+        <p class="heroHint">Scroll down to explore more</p>
+      </div>
+
+      <div class="heroRight">
+        <div class="photoFrame">
+          <img id="heroPhoto" alt="Photo" src="Photo/photo.jpg" />
+          <div class="photoHint" id="photoHint">
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="infoSection">
+      <div class="infoCard">
+        <div class="infoIcon">✨</div>
+        <h3>Thoughtfully Curated</h3>
+        <p class="infoText">Every element has been carefully chosen to create a meaningful experience just for you.</p>
+      </div>
+      <div class="infoCard">
+        <div class="infoIcon">💝</div>
+        <h3>Personalized</h3>
+        <p class="infoText">From the colors to the messages, everything is tailored to celebrate what makes you special.</p>
+      </div>
+      <div class="infoCard">
+        <div class="infoIcon">🎁</div>
+        <h3>Timeless</h3>
+        <p class="infoText">Save this moment. Return whenever you need a reminder of how valued you are.</p>
+      </div>
+    </section>
+
+    <div class="decorativeSection">
+      <div class="decorLine"></div>
+      <div class="decorDot"></div>
+      <div class="decorLine"></div>
+    </div>
+
+    <section class="grid">
+      <section class="card letterCard">
+        <div class="letterEnvelope">
+          <div class="envelopeFlap"></div>
+          <div class="envelopeSeal">✦</div>
+        </div>
+        <div class="cardHead">
+          <h2>Love letter</h2>
+          <div class="tag">personal note</div>
+        </div>
+        <p class="muted letterContent" id="letterText"></p>
+      </section>
+
+      <section class="card">
+        <div class="cardHead">
+          <h2>Why I adore you</h2>
+          <div class="tag">tap each one</div>
+        </div>
+        <div class="reasons" id="reasons"></div>
+      </section>
+    </section>
+
+    <footer class="foot">
+      <div class="muted" id="footerLine">Made with thoughtfulness.</div>
+      <div class="footerExtra">For someone extraordinary. ✨</div>
+    </footer>
+  </main>
+
+  <dialog class="modal" id="settings">
+    <form method="dialog" class="modalCard" id="settingsForm">
+      <div class="modalHead">
+        <div>
+          <div class="modalTitle">Edit content</div>
+          <div class="muted">Edits save on this device.</div>
+        </div>
+        <button class="ghostSmall" value="cancel" type="submit">Close</button>
+      </div>
+
+      <div class="field">
+        <label>Her name</label>
+        <input class="input" id="setName" placeholder="Krizzia" />
+      </div>
+
+      <div class="field">
+        <label>Nickname</label>
+        <input class="input" id="setNick" placeholder="Love" />
+      </div>
+
+      <div class="field">
+        <label>Headline</label>
+        <input class="input" id="setHead" placeholder="Happy Valentine’s Day." />
+      </div>
+
+      <div class="field">
+        <label>Love letter</label>
+        <textarea class="input area" id="setLetter" placeholder="Write your message here"></textarea>
+      </div>
+
+      <div class="field">
+        <label>Reasons (comma separated)</label>
+        <textarea class="input area" id="setReasons" placeholder="Your smile, Your kindness, Your laugh"></textarea>
+      </div>
+
+      <div class="modalBtns">
+        <button class="btn" id="saveBtn" type="button">Save</button>
+        <button class="btn2" value="cancel" type="submit">Cancel</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog class="modal" id="valentineGate">
+    <div class="gateCard">
+      <div class="gateTitle">Will you be my Valentine?</div>
+      <div class="gateSub">This is important to me.</div>
+
+      <div class="gateBtns">
+        <button class="btn" id="gateYes" type="button">Yes</button>
+        <button class="btn2" id="gateNo" type="button">No</button>
+      </div>
+
+      <div class="gateHint" id="gateHint"></div>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast"></div>
+  <canvas id="fx"></canvas>
+  <div class="blurOverlay" id="blurOverlay"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
